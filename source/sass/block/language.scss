@@ -1,0 +1,49 @@
+.language {
+  margin-top: 42px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.language__img {
+  margin-top: 5px;
+}
+
+.language__select {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  width: 104px;
+}
+
+.select2-container--default .select2-selection--single {
+  background: transparent;
+  border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    background: url("../img/arrow-select.png") no-repeat  0 0;
+    width: 10px;
+    height: 7px;
+    top: -4px;
+    left: -13px;
+  }
+}
+
+.select2-selection__rendered {
+
+}

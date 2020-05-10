@@ -1,0 +1,30 @@
+.user-block {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.user-block__link {
+  font-size: 16px;
+  
+  &--registration {
+    color: $color-yellow;
+    display: block;
+    padding: 11px 24px;
+    border: 1px solid $color-yellow;
+    margin-left: 19px;
+
+    &:hover {
+      transition: .4s;
+      background: $color-yellow;
+      color: #414144;
+    }
+  }
+}
+
+.sing-in {
+  color: #ffffff;
+}

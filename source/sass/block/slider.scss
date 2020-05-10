@@ -1,0 +1,145 @@
+.slider {
+  padding-top: 130px;
+  background: #171717;
+  padding-bottom: 40px;
+  position: relative;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    background: url("../img/slider.png") no-repeat 0 0;
+    bottom: 0;
+    right: 10%;
+    width: 580px;
+    height: 620px;
+    z-index: 1;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */
+    only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */
+    only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */
+      background: url("../img/slider-bg@2x.png") no-repeat 0 0;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 470px;
+      width: 490px;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.slider__list {
+  margin-bottom: 130px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.slider__title {
+  font-size: 60px;
+  margin: 0;
+  color: #ffffff;
+  width: 595px;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    font-size: 35px;
+  }
+}
+
+.slider__btn {
+  display: block;
+  box-sizing: border-box;
+  width: 218px;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  background: $color-yellow;
+  border-radius: 2px;
+  padding: 18px 0;
+  transition: .5s;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #171717;
+    border-color: $color-yellow;
+    color: $color-yellow;
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.slider__item {
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
+}
+
+.slider-buttons {
+  width: 135px;
+  display: flex;
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 20px;
+  }
+}
+
+.slider-buttons__element {
+  width: 13px;
+  height: 13px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  &--active {
+    background: $color-yellow;
+  }
+}
+
+#slide2 {
+
+  .slider__btn {
+    background: #ffffff;
+  }
+
+  .slider__title {
+    color: $color-yellow;
+  }
+}
+
+.slide {
+  display: none;
+}
+
+#product-1:checked ~  .slider__list #slide1,
+#product-2:checked ~  .slider__list #slide2{
+  display: block;
+}
+
+#product-1:checked ~ .slider-buttons label[for="product-1"],
+#product-2:checked ~ .slider-buttons label[for="product-2"] {
+  background-color: $color-yellow;
+}

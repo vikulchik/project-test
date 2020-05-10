@@ -1,0 +1,151 @@
+.main-navigation {
+  width: 465px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    background: #000;
+    flex-direction: column;
+    z-index: 3;
+    top: 101px;
+    right: 0;
+    width: 50%;
+    padding: 10px 10px 40px 10px ;
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 70%;
+  }
+}
+
+.show-menu {
+  display: block;
+}
+
+.main-navigation__link {
+  display: block;
+  color: inherit;
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 16px 0 16px 28px;
+    border-bottom: 1px solid #202020;
+    box-sizing: border-box;
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 16px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #444242;
+    }
+
+    &--active:after {
+      content: "";
+      position: absolute;
+      background: $color-yellow;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.main-navigation__item {
+  font-size: 16px;
+  color: #ffffff;
+  list-style: none;
+  padding-top: 42px;
+  position: relative;
+
+  &:first-child {
+    padding-left: 15px;
+  }
+  &:last-child {
+    padding-right: 15px;
+  }
+
+  &--sing-in {
+    display: none;
+  }
+
+  &--active {
+    color: $color-yellow;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: $color-yellow;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &--language {
+    display: none;
+  }
+
+  &:hover {
+  cursor: pointer;
+
+  .submenu {
+    display: flex;
+  }
+}
+
+  &:hover:after {
+    content: "";
+    position: absolute;
+    background: $color-yellow;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .main-navigation__item {
+    padding-top: 0;
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered  {
+      color: #000;
+    }
+
+    &:hover {
+      .submenu {
+        display: block;
+      }
+    }
+
+    &--active {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--sing-in {
+      display: block;
+    }
+
+    &--language {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 10px;
+    }
+  }
+}

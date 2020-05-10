@@ -1,0 +1,25 @@
+.partners {
+  background: #ffe400;
+}
+
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  flex-wrap: wrap;
+}
+
+.partners__link {
+  &:hover {
+    transform: scale(1.1);
+    transition: .8s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 193px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+}

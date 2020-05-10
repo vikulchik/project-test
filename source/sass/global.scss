@@ -1,0 +1,66 @@
+body {
+  font-family: "Gilroy", sans-serif;
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.overlay {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.64);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  animation-name: show;
+  animation-duration: 1s;
+}
+
+.menu-button {
+  background:  transparent;
+  border: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  display: none;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+
+}

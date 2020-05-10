@@ -1,0 +1,25 @@
+.header {
+  min-height: 100px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #414144;
+  background: #171717;
+  padding: 0 38px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+
+}
+
+.wrapper {
+  margin-top: 38px;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

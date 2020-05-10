@@ -1,0 +1,151 @@
+.popup {
+  z-index: 4;
+  width: 633px;
+  background: url("../img/popup-bg.png") no-repeat 0 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2), /* для Safari, Safari IOS */
+  only screen and (min-resolution: 192dpi), /* для IE 10, IE 11, Opera Mini */
+  only screen and (min-resolution: 2dppx) { /* для нормальных браузеров */
+    background: url("../img/popup-bg@2x.png") no-repeat  0 0;
+    background-size: 72% 100%;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
+}
+
+.popup-form {
+  margin-left: auto;
+  width: 50%;
+  padding: 44px 28px 50px 28px;
+  background: #ececec;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 15px 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 55%;
+  }
+}
+
+.popup-form__field {
+  width: 100%;
+  border: 2px solid transparent;
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+  @include placeholder {
+    font-size: 16px;
+    color: #888888;
+  }
+  
+  &--name {
+    margin-bottom: 10px;
+  }
+
+  &--email {
+    margin-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #171717;
+    transition: .6s;
+    outline: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px ;
+  }
+}
+
+.popup-form__title {
+  font-size: 30px;
+  color: #000;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.popup-form__btn {
+  font-size: 18px;
+  color: #ffffff;
+  border: 3px solid transparent;
+  width: 100%;
+  background: #e21b58;
+  box-sizing: border-box;
+  padding: 19px;
+
+  &:hover {
+    transition: .5s;
+    background: #ffffff;
+    color: #e21b58;
+    border-color: #e21b58;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+   font-size: 16px;
+    padding: 5px;
+  }
+}
+
+.popup-form__label {
+  font-size: 16px;
+  color: #333333;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 24px;
+  display: block;
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 3px;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    background: url("../img/checked.png") no-repeat 0 0;
+    width: 13px;
+    height: 10px;
+    top: 6px;
+    left: 4px;
+    display: none;
+  }
+}
+
+.popup-form__checkbox {
+  display: none;
+
+  &:checked + .popup-form__label:after {
+    display: block;
+  }
+}
