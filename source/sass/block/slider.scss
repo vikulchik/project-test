@@ -25,12 +25,12 @@
       background-size: cover;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-m) {
       height: 470px;
       width: 490px;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $tablet-s) {
       height: 100%;
       width: 100%;
     }
@@ -40,7 +40,7 @@
 .slider__list {
   margin-bottom: 130px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     margin-bottom: 60px;
   }
 }
@@ -52,15 +52,15 @@
   width: 595px;
   margin-bottom: 50px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $tablet-l) {
     font-size: 40px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     width: 400px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $tablet-s) {
     width: 100%;
     font-size: 35px;
   }
@@ -86,14 +86,14 @@
     transform: scale(1.1);
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     padding: 10px;
   }
 }
 
 .slider__item {
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $tablet-l) {
     padding: 0 20px;
   }
 }
@@ -102,7 +102,7 @@
   width: 135px;
   display: flex;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $tablet-l) {
     margin-left: 20px;
   }
 }

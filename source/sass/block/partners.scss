@@ -16,7 +16,7 @@
     transition: .8s;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $tablet-l) {
     width: 193px;
     text-align: center;
     margin-bottom: 15px;

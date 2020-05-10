@@ -13,10 +13,10 @@ const svgstore = require("gulp-svgstore");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const del = require("del");
-const uglify = require("gulp-uglify");
 const pump = require("pump");
 const htmlmin = require("gulp-htmlmin");
 const pug = require('gulp-pug');
+const uglify = require('gulp-uglify-es').default;
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('source/views/index.pug')
@@ -69,7 +69,7 @@ gulp.task("html", function () {
 gulp.task("js", function (cb) {
   pump([
         gulp.src("source/js/*.js"),
-        // uglify(),
+        uglify(),
         rename(function (path) {
           path.basename += ".min";
         }),

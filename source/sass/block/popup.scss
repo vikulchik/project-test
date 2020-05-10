@@ -16,11 +16,11 @@
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     width: 80%;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $tablet-s) {
     width: 90%;
   }
 }
@@ -31,11 +31,11 @@
   padding: 44px 28px 50px 28px;
   background: #ececec;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     padding: 20px 15px 20px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $tablet-s) {
     width: 55%;
   }
 }
@@ -69,7 +69,7 @@
     outline: none;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     padding: 10px 20px ;
   }
 }
@@ -80,7 +80,7 @@
   margin: 0;
   margin-bottom: 15px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     font-size: 20px;
   }
 }
@@ -101,11 +101,11 @@
     border-color: #e21b58;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-m) {
     padding: 10px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $tablet-s) {
    font-size: 16px;
     padding: 5px;
   }

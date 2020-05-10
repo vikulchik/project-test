@@ -11,7 +11,7 @@
   z-index: 3;
   display: none;
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: $tablet-l){
     position: static;
     display: block;
     width: 100%;
@@ -24,12 +24,12 @@
   flex-direction: column;
   width: 200px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $tablet-l) {
     margin-bottom: 30px;
   }
 
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $tablet-s) {
     width: 100%;
   }
 }
@@ -52,7 +52,7 @@
     transition: .6s;
   }
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: $tablet-l){
     border-bottom: none;
     padding-left: 0;
   }

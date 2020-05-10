@@ -28,6 +28,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^3.0.0",
     "npx": "^10.2.0",
     "posthtml-include": "^1.2.0",
