@@ -7,20 +7,8 @@ var menuButton = document.querySelector(".menu-button");
 var navigation = document.querySelector(".main-navigation");
 var escKeyCode = 27;
 
-// var languageIcon = {
-//   english: 'img/english.png',
-//   germany: 'img/germany.png',
-// };
-//
-// var icon = document.querySelector('.language img');
 
-$('.js-example-basic-single').select2({
-  // templateResult: formatState
-});
-
-// $eventSelect.on("change", function (e) {
-//   console.log(e);
-// });
+$('.js-example-basic-single').select2({});
 
 ///popup-form-registration
 
