@@ -7,11 +7,12 @@
         use(xlink:href="img/sprite.svg#icon-menu-burger")
   ul.main-navigation
     li.main-navigation__item.main-navigation__item--language
-      svg.user-list__search-icon(width="49.945" height="24.007")
-        use(xlink:href="img/sprite.svg#english").language__img
-      select.language__select.js-example-basic-single(name="state" style="width: 100%")
-        option.language__option.language__option--english(value="english") English
-        option.language__option.language__option--egermany(value="germany") Germany
+    .language
+        svg.user-list__search-icon(width="49.945" height="24.007")
+          use(xlink:href="img/sprite.svg#english").language__img
+        select.language__select.js-example-basic-single(name="state" style="width: 100%")
+          option.language__option.language__option--english(value="english") English
+          option.language__option.language__option--egermany(value="germany") Germany
     li.main-navigation__item.main-navigation__item--sing-in
       a.main-navigation__link(href="#") Log In
     li.main-navigation__item.main-navigation__item--active
