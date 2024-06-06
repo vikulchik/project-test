@@ -1,18 +1,18 @@
 (function () {
 
-  var ESC_KEY_CODE = 27;
+  const ESC_KEY_CODE = 27;
 
-  var loginBtn = document.querySelector(".sing-in");
-  var loginBtnNav = document.querySelector(".main-navigation__item--sing-in");
-  var popupRegistration = document.querySelector(".popup");
-  var overlay = document.querySelector(".overlay");
-  var menuButton = document.querySelector(".menu-button");
-  var navigation = document.querySelector(".main-navigation");
-  var languageIconElements = document.querySelectorAll('.language__img');
+  let loginBtn = document.querySelector(".sing-in");
+  let loginBtnNav = document.querySelector(".main-navigation__item--sing-in");
+  let popupRegistration = document.querySelector(".popup");
+  let overlay = document.querySelector(".overlay");
+  let menuButton = document.querySelector(".menu-button");
+  let navigation = document.querySelector(".main-navigation");
+  let languageIconElements = document.querySelectorAll('.language__img');
 
-  var baseLink = 'img/sprite.svg#';
+  let baseLink = 'img/sprite.svg#';
 
-  var select = $('.js-example-basic-single').select2();
+  let select = $('.js-example-basic-single').select2();
 
 
   function changeSelectValue(value) {
@@ -23,8 +23,8 @@
   function setupSelectListener() {
     select.on('select2:select', function (e) {
       for (let i = 0; i < languageIconElements.length; i++) {
-        var element = languageIconElements[i];
-        var value = e.target.value;
+        let element = languageIconElements[i];
+        let value = e.target.value;
 
         element.setAttribute('xlink:href', baseLink + value);
         changeSelectValue(value)
